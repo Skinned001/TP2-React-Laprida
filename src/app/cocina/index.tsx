@@ -1,4 +1,5 @@
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { DondeEstoy } from '../../components/DondeEstoy';
 import { useAppContext } from '../../context/AppContext';
 
 const formatoPrecio = new Intl.NumberFormat('es-AR', {
@@ -60,6 +61,7 @@ export default function CocinaScreen() {
           <Text style={styles.description}>Cuando llegue un pedido, va a aparecer acá.</Text>
         </View>
       )}
+      <DondeEstoy />
     </ScrollView>
   );
 }

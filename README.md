@@ -45,8 +45,10 @@ src/
 │           └── nota.tsx             # /carrito/nota
 ├── components/
 │   ├── PlaceholderPage.tsx
-│   └── PlatoCard.tsx
+│   ├── PlatoCard.tsx
+│   └── DondeEstoy.tsx
 ├── data/
+│   ├── ayuda.ts
 │   └── platos.ts
 ├── context/
 │   └── AppContext.tsx
@@ -68,3 +70,5 @@ El Login solo está disponible sin sesión y Cocina solo con sesión. Al cerrar 
 El menú muestra los platos agrupados por categoría. Las rutas de categoría y detalle validan sus parámetros; el buscador combina texto y categoría, reflejando ambos filtros en la URL con `router.setParams`.
 
 Al confirmar desde `/confirmar`, la app encola el pedido y usa `router.replace` para abrir `/turno/[numero]`. Así, volver atrás no muestra una confirmación ya enviada. El turno informa cuántos pedidos están antes en la cola y estima tres minutos por pedido.
+
+La sección `/ayuda` tiene un índice y artículos de profundidad variable bajo `/ayuda/...`. El componente `DondeEstoy` muestra pathname, segmentos y parámetros locales al final de las pantallas; la constante `DEBUG` en `src/components/DondeEstoy.tsx` está en `false` para ocultarlo en el uso normal.

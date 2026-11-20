@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
+import { DondeEstoy } from '../components/DondeEstoy';
 import { useAppContext } from '../context/AppContext';
 
 export default function LoginScreen() {
@@ -50,6 +51,7 @@ export default function LoginScreen() {
         <Text style={styles.buttonText}>Ingresar</Text>
       </Pressable>
       <Text style={styles.hint}>Usuario: cocina · Clave: ipf2026</Text>
+      <DondeEstoy />
     </View>
   );
 }

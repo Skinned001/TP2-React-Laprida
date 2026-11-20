@@ -1,5 +1,6 @@
 import { Stack, useLocalSearchParams } from 'expo-router';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { DondeEstoy } from '../../components/DondeEstoy';
 import { PlatoCard } from '../../components/PlatoCard';
 import { PlaceholderPage } from '../../components/PlaceholderPage';
 import { categoriasPlato, esCategoriaPlato, platos } from '../../data/platos';
@@ -31,6 +32,7 @@ export default function CategoriaScreen() {
           <PlatoCard key={plato.id} plato={plato} />
         ))}
       </View>
+      <DondeEstoy />
     </ScrollView>
   );
 }

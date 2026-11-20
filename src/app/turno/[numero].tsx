@@ -1,5 +1,6 @@
 import { useLocalSearchParams } from 'expo-router';
 import { StyleSheet, Text, View } from 'react-native';
+import { DondeEstoy } from '../../components/DondeEstoy';
 import { useAppContext } from '../../context/AppContext';
 
 export default function TurnoScreen() {
@@ -20,6 +21,7 @@ export default function TurnoScreen() {
         <Text style={styles.description}>
           El número “{numero}” no corresponde a un pedido pendiente o atendido en esta sesión.
         </Text>
+        <DondeEstoy />
       </View>
     );
   }
@@ -42,6 +44,7 @@ export default function TurnoScreen() {
           </Text>
         </>
       ) : null}
+      <DondeEstoy />
     </View>
   );
 }

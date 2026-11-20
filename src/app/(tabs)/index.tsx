@@ -1,5 +1,6 @@
 import { Link } from 'expo-router';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { DondeEstoy } from '../../components/DondeEstoy';
 import { useAppContext } from '../../context/AppContext';
 
 export default function HomeScreen() {
@@ -19,6 +20,7 @@ export default function HomeScreen() {
           description={logueado ? 'Ver los pedidos pendientes' : 'Acceso para el personal'}
         />
       </View>
+      <DondeEstoy />
     </View>
   );
 }

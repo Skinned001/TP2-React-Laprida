@@ -1,5 +1,6 @@
 import { router } from 'expo-router';
 import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
+import { DondeEstoy } from '../../../components/DondeEstoy';
 import { useAppContext } from '../../../context/AppContext';
 
 export default function NotaScreen() {
@@ -24,6 +25,7 @@ export default function NotaScreen() {
       <Pressable accessibilityRole="button" onPress={() => router.back()} style={styles.button}>
         <Text style={styles.buttonText}>Guardar nota</Text>
       </Pressable>
+      <DondeEstoy />
     </View>
   );
 }

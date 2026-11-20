@@ -1,5 +1,6 @@
 import { Link } from 'expo-router';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { DondeEstoy } from '../../components/DondeEstoy';
 import { useAppContext } from '../../context/AppContext';
 
 export default function AtendidosScreen() {
@@ -32,6 +33,7 @@ export default function AtendidosScreen() {
       <Link href="/cocina" style={styles.link}>
         Volver al pedido actual
       </Link>
+      <DondeEstoy />
     </ScrollView>
   );
 }

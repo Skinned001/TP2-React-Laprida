@@ -1,6 +1,7 @@
 import { router } from 'expo-router';
 import { useRef } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { DondeEstoy } from '../components/DondeEstoy';
 import { useAppContext } from '../context/AppContext';
 
 const formatoPrecio = new Intl.NumberFormat('es-AR', {
@@ -60,6 +61,7 @@ export default function ConfirmarScreen() {
           </Pressable>
         </>
       )}
+      <DondeEstoy />
     </ScrollView>
   );
 }

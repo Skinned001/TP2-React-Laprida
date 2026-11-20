@@ -1,5 +1,6 @@
 import { Link } from 'expo-router';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { DondeEstoy } from '../../../components/DondeEstoy';
 import { useAppContext } from '../../../context/AppContext';
 
 const formatoPrecio = new Intl.NumberFormat('es-AR', {
@@ -84,6 +85,7 @@ export default function CarritoScreen() {
           </Text>
         </Pressable>
       )}
+      <DondeEstoy />
     </ScrollView>
   );
 }

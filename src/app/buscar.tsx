@@ -1,5 +1,6 @@
 import { router, useLocalSearchParams } from 'expo-router';
 import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { DondeEstoy } from '../components/DondeEstoy';
 import { PlatoCard } from '../components/PlatoCard';
 import { categoriasPlato, esCategoriaPlato, platos } from '../data/platos';
 
@@ -55,6 +56,7 @@ export default function BuscarScreen() {
       ) : (
         <Text style={styles.empty}>No encontramos platos con esos filtros.</Text>
       )}
+      <DondeEstoy />
     </ScrollView>
   );
 }

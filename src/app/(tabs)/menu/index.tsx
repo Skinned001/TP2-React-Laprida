@@ -1,5 +1,6 @@
 import { Link } from 'expo-router';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { DondeEstoy } from '../../../components/DondeEstoy';
 import { PlatoCard } from '../../../components/PlatoCard';
 import { categoriasPlato, platos } from '../../../data/platos';
 
@@ -24,6 +25,7 @@ export default function MenuScreen() {
           </View>
         );
       })}
+      <DondeEstoy />
     </ScrollView>
   );
 }

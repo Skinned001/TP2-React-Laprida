@@ -1,6 +1,7 @@
 import { Stack, useLocalSearchParams, Link } from 'expo-router';
 import { useState } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { DondeEstoy } from '../../../components/DondeEstoy';
 import { PlaceholderPage } from '../../../components/PlaceholderPage';
 import { useAppContext } from '../../../context/AppContext';
 import { platos } from '../../../data/platos';
@@ -55,6 +56,7 @@ export default function PlatoScreen() {
           </Link>
         </View>
       )}
+      <DondeEstoy />
     </View>
   );
 }

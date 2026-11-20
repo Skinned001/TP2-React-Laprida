@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native';
+import { DondeEstoy } from './DondeEstoy';
 
 type PlaceholderPageProps = {
   title: string;
@@ -12,6 +13,7 @@ export function PlaceholderPage({ title, description }: PlaceholderPageProps) {
       <Text style={styles.description}>
         {description ?? 'La navegación ya está preparada. En los próximos pasos completamos esta pantalla.'}
       </Text>
+      <DondeEstoy />
     </View>
   );
 }

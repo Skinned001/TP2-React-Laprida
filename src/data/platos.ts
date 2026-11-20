@@ -1,5 +1,16 @@
 export type CategoriaPlato = 'desayuno' | 'almuerzo' | 'bebidas' | 'kiosco';
 
+export const categoriasPlato: { id: CategoriaPlato; nombre: string }[] = [
+  { id: 'desayuno', nombre: 'Desayuno' },
+  { id: 'almuerzo', nombre: 'Almuerzo' },
+  { id: 'bebidas', nombre: 'Bebidas' },
+  { id: 'kiosco', nombre: 'Kiosco' },
+];
+
+export function esCategoriaPlato(valor: string): valor is CategoriaPlato {
+  return categoriasPlato.some((categoria) => categoria.id === valor);
+}
+
 export type Plato = {
   id: number;
   nombre: string;

@@ -10,7 +10,7 @@ export default function RootLayout() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <AppProvider>
-        <Stack screenOptions={{ headerTitle: 'Comedor IPF' }}>
+        <Stack screenOptions={{ title: 'Comedor IPF' }}>
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
           <Stack.Screen name="categorias/[categoria]" options={{ title: 'Categoría' }} />
           <Stack.Screen name="buscar" options={{ title: 'Buscar' }} />

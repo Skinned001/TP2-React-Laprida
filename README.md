@@ -44,7 +44,8 @@ src/
 │           ├── index.tsx            # /carrito
 │           └── nota.tsx             # /carrito/nota
 ├── components/
-│   └── PlaceholderPage.tsx
+│   ├── PlaceholderPage.tsx
+│   └── PlatoCard.tsx
 ├── data/
 │   └── platos.ts
 ├── context/
@@ -61,3 +62,5 @@ El Stack raíz contiene las Tabs y las pantallas que deben abrirse por encima de
 `src/data/platos.ts` contiene 12 platos de ejemplo, tres por categoría. Los precios son valores de referencia en pesos argentinos.
 
 El `AppProvider` del layout raíz comparte la sesión, el carrito, la cola de pedidos y el historial de atendidos. Para probar el acceso de cocina, el usuario fijo es `cocina` y la clave es `ipf2026`.
+
+El menú muestra los platos agrupados por categoría. Las rutas de categoría y detalle validan sus parámetros; el buscador combina texto y categoría, reflejando ambos filtros en la URL con `router.setParams`.

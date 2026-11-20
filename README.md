@@ -64,3 +64,5 @@ El Stack raíz contiene las Tabs y las pantallas que deben abrirse por encima de
 El `AppProvider` del layout raíz comparte la sesión, el carrito, la cola de pedidos y el historial de atendidos. Para probar el acceso de cocina, el usuario fijo es `cocina` y la clave es `ipf2026`.
 
 El menú muestra los platos agrupados por categoría. Las rutas de categoría y detalle validan sus parámetros; el buscador combina texto y categoría, reflejando ambos filtros en la URL con `router.setParams`.
+
+Al confirmar desde `/confirmar`, la app encola el pedido y usa `router.replace` para abrir `/turno/[numero]`. Así, volver atrás no muestra una confirmación ya enviada. El turno informa cuántos pedidos están antes en la cola y estima tres minutos por pedido.

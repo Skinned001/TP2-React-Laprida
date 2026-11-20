@@ -47,6 +47,8 @@ src/
 │   └── PlaceholderPage.tsx
 ├── data/
 │   └── platos.ts
+├── context/
+│   └── AppContext.tsx
 └── estructuras/
     ├── Pila.ts
     └── Cola.ts
@@ -57,3 +59,5 @@ El Stack raíz contiene las Tabs y las pantallas que deben abrirse por encima de
 `Pila<T>` y `Cola<T>` usan campos privados. La Cola avanza un índice de frente y compacta el almacenamiento cuando hace falta, sin usar `Array.shift()`. Ambas estructuras permiten consultar su tamaño y obtener una copia de sus elementos con `aArray()`.
 
 `src/data/platos.ts` contiene 12 platos de ejemplo, tres por categoría. Los precios son valores de referencia en pesos argentinos.
+
+El `AppProvider` del layout raíz comparte la sesión, el carrito, la cola de pedidos y el historial de atendidos. Para probar el acceso de cocina, el usuario fijo es `cocina` y la clave es `ipf2026`.

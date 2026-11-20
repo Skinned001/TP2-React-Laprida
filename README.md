@@ -72,3 +72,30 @@ El menú muestra los platos agrupados por categoría. Las rutas de categoría y 
 Al confirmar desde `/confirmar`, la app encola el pedido y usa `router.replace` para abrir `/turno/[numero]`. Así, volver atrás no muestra una confirmación ya enviada. El turno informa cuántos pedidos están antes en la cola y estima tres minutos por pedido.
 
 La sección `/ayuda` tiene un índice y artículos de profundidad variable bajo `/ayuda/...`. El componente `DondeEstoy` muestra pathname, segmentos y parámetros locales al final de las pantallas; la constante `DEBUG` en `src/components/DondeEstoy.tsx` está en `false` para ocultarlo en el uso normal.
+
+## Deep links para probar
+
+- Con la app instalada: `comedoripf://menu/7`
+- Con Expo Go en esta red: `exp://10.254.198.243:8081/--/menu/7`
+
+La IP local puede cambiar; si pasa, reemplazala por la que informa Expo. En el enlace de Expo Go, `/--/` separa la dirección del servidor de la ruta de la app.
+
+## Capturas
+
+![Inicio de Comedor IPF](capturas/inicio.png)
+
+![Carrito con varios platos y la opción para deshacer](capturas/carrito-deshacer.png)
+
+![Confirmación del pedido](capturas/confirmacion.png)
+
+![Turno asignado](capturas/turno.png)
+
+![Cocina con un pedido pendiente](capturas/cocina-atendiendo.png)
+
+![Historial de pedidos atendidos](capturas/cocina-atendidos.png)
+
+![Pantalla de ingreso de Cocina](capturas/login.png)
+
+![Inicio después de cerrar sesión](capturas/logout.png)
+
+![Ruta no encontrada](capturas/404.png)

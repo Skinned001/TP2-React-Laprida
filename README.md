@@ -55,13 +55,15 @@ src/
     └── Cola.ts
 ```
 
-El Stack raíz contiene las Tabs y las pantallas que deben abrirse por encima de ellas. Menú y Carrito tienen su propio Stack; Cocina tiene un Drawer. En esta primera etapa las rutas muestran pantallas provisionales: la lógica de datos, sesión y pedidos se completa en los próximos pasos.
+El Stack raíz contiene las Tabs y las pantallas que deben abrirse por encima de ellas. Menú y Carrito tienen su propio Stack; Cocina tiene un Drawer protegido por sesión.
 
 `Pila<T>` y `Cola<T>` usan campos privados. La Cola avanza un índice de frente y compacta el almacenamiento cuando hace falta, sin usar `Array.shift()`. Ambas estructuras permiten consultar su tamaño y obtener una copia de sus elementos con `aArray()`.
 
 `src/data/platos.ts` contiene 12 platos de ejemplo, tres por categoría. Los precios son valores de referencia en pesos argentinos.
 
 El `AppProvider` del layout raíz comparte la sesión, el carrito, la cola de pedidos y el historial de atendidos. Para probar el acceso de cocina, el usuario fijo es `cocina` y la clave es `ipf2026`.
+
+El Login solo está disponible sin sesión y Cocina solo con sesión. Al cerrar sesión, Expo Router quita Cocina del historial. Cocina atiende los pedidos desde el frente de la Cola y muestra los pedidos ya atendidos del más reciente al más antiguo.
 
 El menú muestra los platos agrupados por categoría. Las rutas de categoría y detalle validan sus parámetros; el buscador combina texto y categoría, reflejando ambos filtros en la URL con `router.setParams`.
 

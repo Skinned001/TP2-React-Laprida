@@ -1,7 +1,10 @@
 import { Link } from 'expo-router';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { useAppContext } from '../../context/AppContext';
 
 export default function HomeScreen() {
+  const { logueado } = useAppContext();
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Comedor IPF</Text>
@@ -10,7 +13,11 @@ export default function HomeScreen() {
         <QuickLink href="/menu" title="Menú" description="Mirá los platos disponibles" />
         <QuickLink href="/buscar" title="Buscar" description="Encontrá algo rico" />
         <QuickLink href="/ayuda" title="Ayuda" description="Consultá cómo funciona" />
-        <QuickLink href="/cocina" title="Cocina" description="Acceso para el personal" />
+        <QuickLink
+          href={logueado ? '/cocina' : '/login'}
+          title="Cocina"
+          description={logueado ? 'Ver los pedidos pendientes' : 'Acceso para el personal'}
+        />
       </View>
     </View>
   );
@@ -21,7 +28,7 @@ function QuickLink({
   title,
   description,
 }: {
-  href: '/menu' | '/buscar' | '/ayuda' | '/cocina';
+  href: '/menu' | '/buscar' | '/ayuda' | '/login' | '/cocina';
   title: string;
   description: string;
 }) {

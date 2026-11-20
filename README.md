@@ -43,8 +43,13 @@ src/
 │           ├── _layout.tsx          # Stack de la tab Carrito
 │           ├── index.tsx            # /carrito
 │           └── nota.tsx             # /carrito/nota
-└── components/
-    └── PlaceholderPage.tsx
+├── components/
+│   └── PlaceholderPage.tsx
+└── estructuras/
+    ├── Pila.ts
+    └── Cola.ts
 ```
 
 El Stack raíz contiene las Tabs y las pantallas que deben abrirse por encima de ellas. Menú y Carrito tienen su propio Stack; Cocina tiene un Drawer. En esta primera etapa las rutas muestran pantallas provisionales: la lógica de datos, sesión y pedidos se completa en los próximos pasos.
+
+`Pila<T>` y `Cola<T>` usan campos privados. La Cola avanza un índice de frente y compacta el almacenamiento cuando hace falta, sin usar `Array.shift()`. Ambas estructuras permiten consultar su tamaño y obtener una copia de sus elementos con `aArray()`.

@@ -11,7 +11,9 @@ export default function TabsLayout() {
         name="index"
         options={{
           title: 'Inicio',
-          tabBarIcon: ({ color, size }) => <Ionicons name="home-outline" color={color} size={size} />,
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="home-outline" color={typeof color === 'number' ? '#1B5E3B' : color ?? '#1B5E3B'} size={size} />
+          ),
         }}
       />
       <Tabs.Screen
@@ -19,7 +21,9 @@ export default function TabsLayout() {
         options={{
           title: 'Menú',
           headerShown: false,
-          tabBarIcon: ({ color, size }) => <Ionicons name="restaurant-outline" color={color} size={size} />,
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="restaurant-outline" color={typeof color === 'number' ? '#1B5E3B' : color ?? '#1B5E3B'} size={size} />
+          ),
         }}
       />
       <Tabs.Screen
@@ -28,7 +32,9 @@ export default function TabsLayout() {
           title: 'Carrito',
           headerShown: false,
           tabBarBadge: cantidadCarrito > 0 ? cantidadCarrito : undefined,
-          tabBarIcon: ({ color, size }) => <Ionicons name="cart-outline" color={color} size={size} />,
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="cart-outline" color={typeof color === 'number' ? '#1B5E3B' : color ?? '#1B5E3B'} size={size} />
+          ),
         }}
       />
     </Tabs>

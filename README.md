@@ -1,6 +1,6 @@
 # TP2-React-Laprida
 
-App **Comedor IPF** para el TP2 de React Native, armada con Expo Router, TypeScript y Expo SDK 57.
+App **Comedor IPF** para el TP2 de React Native, armada con Expo Router, TypeScript y Expo SDK 58.
 
 ## Arrancar la app
 
@@ -76,9 +76,9 @@ La sección `/ayuda` tiene un índice y artículos de profundidad variable bajo 
 ## Deep links para probar
 
 - Con la app instalada: `comedoripf://menu/7`
-- Con Expo Go en esta red: `exp://10.254.198.243:8081/--/menu/7`
+- Con Expo Go en esta red: `exp://10.254.198.243:8082/--/menu/7`
 
-La IP local puede cambiar; si pasa, reemplazala por la que informa Expo. En el enlace de Expo Go, `/--/` separa la dirección del servidor de la ruta de la app.
+La IP o el puerto pueden cambiar; reemplazalos por los que informa Expo. En el enlace de Expo Go, `/--/` separa la dirección del servidor de la ruta de la app.
 
 ## Capturas
 

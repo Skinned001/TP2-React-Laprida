@@ -9,13 +9,42 @@ npm ci
 npm run start
 ```
 
-## Rutas iniciales
+## Rutas y navegadores
 
 ```text
 src/
-└── app/
-    ├── _layout.tsx   # Stack raíz
-    └── index.tsx     # Inicio (/)
+├── app/
+│   ├── _layout.tsx                  # Stack raíz y GestureHandlerRootView
+│   ├── +not-found.tsx               # 404
+│   ├── pedido.tsx                   # Redirección a /carrito
+│   ├── buscar.tsx                   # /buscar, Stack raíz
+│   ├── confirmar.tsx                # /confirmar, modal en el Stack raíz
+│   ├── login.tsx                    # /login, modal en el Stack raíz
+│   ├── categorias/
+│   │   └── [categoria].tsx          # /categorias/:categoria, Stack raíz
+│   ├── turno/
+│   │   └── [numero].tsx             # /turno/:numero, Stack raíz
+│   ├── ayuda/
+│   │   ├── _layout.tsx              # Stack de ayuda
+│   │   ├── index.tsx                # /ayuda
+│   │   └── [...slug].tsx            # /ayuda/...
+│   ├── cocina/
+│   │   ├── _layout.tsx              # Drawer
+│   │   ├── index.tsx                # /cocina
+│   │   └── atendidos.tsx            # /cocina/atendidos
+│   └── (tabs)/
+│       ├── _layout.tsx              # Tabs de Inicio, Menú y Carrito
+│       ├── index.tsx                # /
+│       ├── menu/
+│       │   ├── _layout.tsx          # Stack de la tab Menú
+│       │   ├── index.tsx            # /menu
+│       │   └── [id].tsx             # /menu/:id
+│       └── carrito/
+│           ├── _layout.tsx          # Stack de la tab Carrito
+│           ├── index.tsx            # /carrito
+│           └── nota.tsx             # /carrito/nota
+└── components/
+    └── PlaceholderPage.tsx
 ```
 
-La estructura de rutas y los navegadores se va a ampliar a medida que avancemos con el TP.
+El Stack raíz contiene las Tabs y las pantallas que deben abrirse por encima de ellas. Menú y Carrito tienen su propio Stack; Cocina tiene un Drawer. En esta primera etapa las rutas muestran pantallas provisionales: la lógica de datos, sesión y pedidos se completa en los próximos pasos.
